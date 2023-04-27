@@ -1,0 +1,64 @@
+$(document).ready(function() {
+    $('.optionL').on('click', function() {
+        
+        var num = $(this).attr('id').slice(3);
+        var text = '';
+        var virals = '<span class="bigtitle">The Infected</span><div class="dottedline"></div><div class="main-text"><h3>COMMON</h3><p>Biters: Slow-moving zombies that are the most common type encountered in the game. They are attracted to noise and will attack the player on sight.</p><p>Virals: Fast-moving zombies that are more aggressive than Biters and can quickly overwhelm the player in groups. They are attracted to noise and can climb walls and obstacles.</p><p>Gas Tanks: Biters that have been outfitted with a hazmat suit, rendering them unable to bite the player. Instead, they will attack with punches. However, they carry a gas tank on their back, which will explode after a few seconds if hit, causing massive damage to the player and any nearby enemies.</p></div><h3>UNCOMMON</h3><p>Goons: Large, heavily muscled zombies that use concrete rebar to deal massive damage to the player. They are slow-moving but tough to kill and will charge at the player if provoked.</p><p>Toads: Bloated zombies that can spit toxic acid at the player, causing damage over time. They are also resistant to most types of damage and can be difficult to take down.</p><p>Demolishers: Huge, armored zombies that can throw large, concrete boulders at the player to deal massive damage. They are also resistant to most types of damage and can only be killed by targeting weak points or using explosives.</p><p>Bombers: Bloated zombies that carry inflated organs inside their bodies. When killed, they will explode, causing damage to the player and any nearby enemies. They are useful for killing other infected.</p><h3>NIGHT INFECTED</h3><p>Volatile: Extremely dangerous and fast-moving zombies that only come out at night. They are attracted to noise and can easily overpower the player.</p><p>Blue Volatile: A stronger variant of the Volatile, with increased speed and health. They are only found in specific areas and are much more difficult to defeat.</p><p>Sentient Volatile: The strongest type of Volatile, with increased intelligence and agility. They are able to use advanced tactics and will hunt down the player relentlessly.</p><p>Bolter: A rare, fast-moving zombie that only comes out at night. They are difficult to catch but drop valuable loot when killed.</p><p>Night Walker: A type of zombie that only appears at night, similar to the Volatile. They move slowly but are able to detect the player from a distance and will call out for other zombies.</p><p>Night Hunter: A powerful infected that can only be found in the multiplayer mode of Dying Light. They are fast, agile, and able to use a range of special abilities to hunt down the player.</p>';
+        var story = '<span class="bigtitle">The Storyline</span><div class="dottedline"></div><div class="main-text"><p>Dying Light is set in the city of Harran, Turkey, which has been placed under quarantine after a mysterious outbreak turns the majority of the population into flesh-eating zombies. The player takes on the role of Kyle Crane, an undercover operative for the Global Relief Effort (GRE), who is sent into the city to retrieve a stolen file containing sensitive information.</p><p>Upon arrival, Crane is attacked by zombies and rescued by a group of survivors led by a man named Harris Brecken. Crane offers to help the survivors in exchange for their assistance in locating the file. Over time, Crane becomes more involved with the survivors and learns that the outbreak was caused by a virus engineered by the GRE as a bioweapon.</p><p>Crane works with the survivors to gather information on the GRE activities and the origins of the virus. Along the way, he encounters a number of different factions with their own agendas. One of these factions is led by a man named Rais, who controls a large group of bandits and is ruthless in his quest for power.</p><p>As Crane delves deeper into the mystery of the outbreak, he uncovers a plot by the GRE to use the virus as a weapon. The organization plans to bomb Harran in order to cover up their involvement and prevent the virus from spreading. Crane must race against time to stop the GRE before they can carry out their plan.</p><p>In the climax of the story, Crane and the survivors launch an assault on the GRE compound in an attempt to retrieve the file and stop the organization. However, the mission goes awry when Rais and his bandits intervene, resulting in a bloody battle.</p><p>After surviving the battle, Crane confronts Rais in a final showdown. Depending on the player actions throughout the game, they can choose to either kill Rais and retrieve the file, or let him live and hand over the file to the GRE.</p><p>Regardless of the player choice, the story ends with the fate of Harran and the world at stake. If the player chooses to hand over the file to the GRE, the organization detonates a bomb in Harran, killing thousands of people and allowing the virus to spread to other parts of the world. If the player chooses to kill Rais and retrieve the file, they are able to stop the GRE plan and contain the virus.</p>'
+        var weapons = '<span class="bigtitle">The Weapons</span><div class="dottedline"></div><div class="main-text"><p>EXPcalibur - This is a legendary sword that players can find in a cave near the center of the map. It deals massive damage and has a unique special attack that unleashes a whirlwind of energy.</p><p>Korek Machete - This weapon is a modified machete that deals significant damage and has a high critical hit rate. It can be obtained by completing a series of challenges given by a man named Jaffar.</p><p>The Following Pistol - This is a unique pistol that can only be obtained in the DLC "The Following". It has a high rate of fire and deals significant damage, making it a valuable addition to any arsenal.</p><p>Last Hope - This is a modified double-barreled shotgun that deals massive damage and has a high chance of knocking enemies down. It can be obtained by completing a series of challenges given by a man named Rupert.</p><p>Bozak Bow - This is a unique bow that players can obtain by completing the Bozak Horde DLC. It fires explosive arrows that deal massive damage to enemies.</p><p>The Following Sickle - This is a unique melee weapon that can only be obtained in the DLC "The Following". It deals significant damage and has a high critical hit rate.</p><p>Harran Military Rifle - This is a powerful assault rifle that can be obtained by completing the side quest "The Thrill of the Chase". It has a high rate of fire and deals significant damage.</p><p>Volatile Hunter Baton - This is a powerful melee weapon that can be obtained by completing the side quest "Gassed Up". It has a high damage output and can stun enemies.</p><p>Bone Splitter - This is a unique melee weapon that can be obtained by completing the side quest "The Stuffed Turtle". It deals massive damage and has a high critical hit rate.</p><p>Fenris Dagger - This is a unique melee weapon that can be obtained by completing the side quest "The Following: The Weapon". It has a high damage output and a chance to freeze enemies.</p>'
+        var locations = '<span class="bigtitle">The Locations</span><div class="dottedline"></div><div class="main-text"><p>The Tower - This is the main hub for players in the game. It is a tall building in the center of the map that serves as a safe haven for survivors. Players can visit the Tower to receive quests, purchase weapons and equipment, and interact with other characters.</p><p>Old Town - This is a section of the city that is more densely populated than other areas. It is filled with narrow streets and alleyways, making it a challenging area to navigate. Old Town is also home to several important quest locations and unique weapons and items.</p><p>The Slums - This is the starting area of the game, where players begin their journey. The Slums are a dilapidated area of the city that is overrun with zombies and other dangers. Players will need to explore this area to find important quest locations and resources.</p><p>Harran Stadium - This is a massive stadium that is converted into a safe zone for survivors. It is heavily fortified and serves as a key location in the game story.</p><p>Antenna - This is a tall tower that serves as a radio transmitter. It is an important location in the game story and players will need to climb to the top of the tower to complete certain quests.</p><p>Sewers - These are underground tunnels that are filled with water and provide a shortcut to various locations throughout the city. Players will need to navigate the sewers to complete certain quests and find valuable items.</p><p>Bridge - This is a large bridge that spans a river outside the city. It is an important location in the game story and players will need to cross the bridge to progress through certain quests.</p>'
+        var quests = '<span class="bigtitle">The Quests</span><div class="dottedline"></div><div class="main-text"><p>Awakening - This is the first mission of the game, where the player character Kyle Crane arrives in the city of Harran and is introduced to the game mechanics and story.</p><p>First Assignment - In this mission, Crane is tasked with finding a missing contact in the city and begins to learn more about the virus that has taken hold.</p><p>Airdrop - This mission tasks Crane with retrieving a supply drop from the city that has gone missing. Along the way, he discovers more about the factions and people living in the city.</p><p>Pact with Rais - Crane is introduced to the leader of a group of survivors in the city, Rais, and makes a deal to retrieve sensitive information from the government building known as the Tower.</p><p>Siblings - In this mission, Crane meets the siblings Troy and Jade who work at the Tower, and learns about their plans to help the survivors of the city.</p><p>The Pit - Crane is sent to retrieve a medicine supply from a dangerous area of the city known as The Pit, where he faces new challenges and enemies.</p><p>The Saviors - This mission introduces Crane to another faction in the city, The Saviors, and tasks him with completing a mission for them to earn their trust.</p><p>The Museum - Crane is sent to retrieve a valuable artifact from a museum that is overrun with zombies, leading to a challenging and action-packed mission.</p><p>Extraction - In this mission, Crane helps a group of survivors escape from the city using a helicopter, but things dont go as planned.</p><p>The Following - The final mission of the game main story arc, where Crane sets out to confront the source of the virus and uncover the truth behind what happened in the city of Harran.</p>'
+        
+        switch (num) {
+            case '1':
+                window.location.href = 'index.html';
+                break;
+            case '2':
+                text = virals;
+                $('#topbar').remove();
+                $('.lower').css('margin-top', '20px');
+                $('#sidebar').css({
+                    'border-top-left-radius':'35px',
+                    'border-bottom-left-radius':'35px'
+                })
+                break;  
+            case '3':
+                text = story;
+                $('#topbar').remove();
+                $('.lower').css('margin-top', '20px');
+                $('#sidebar').css({
+                    'border-top-left-radius':'35px',
+                    'border-bottom-left-radius':'35px'
+                })
+                break;
+            case '4':
+                text = weapons;
+                $('#topbar').remove();
+                $('.lower').css('margin-top', '20px');
+                $('#sidebar').css({
+                    'border-top-left-radius':'35px',
+                    'border-bottom-left-radius':'35px'
+                })
+                break;
+            case '5':
+                text = locations;
+                $('#topbar').remove();
+                $('.lower').css('margin-top', '20px');
+                $('#sidebar').css({
+                    'border-top-left-radius':'35px',
+                    'border-bottom-left-radius':'35px'
+                })
+                break;
+            case '6':
+                text = quests;
+                $('#topbar').remove();
+                $('.lower').css('margin-top', '20px');
+                $('#sidebar').css({
+                    'border-top-left-radius':'35px',
+                    'border-bottom-left-radius':'35px'
+                })
+                break;
+    }
+      $('#content').html(text);
+    });
+});
